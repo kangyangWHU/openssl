@@ -134,7 +134,7 @@ IF[{- !$disabled{"fuzz-afl"} || !$disabled{"fuzz-libfuzzer"} -}]
   INCLUDE[quic-client]=../include {- $ex_inc -}
   DEPEND[quic-client]=../libcrypto.a ../libssl.a {- $ex_lib -}
 
-  SOURCE[quic-server]=quic-server.c driver.c fuzz_rand.c
+  SOURCE[quic-server]=quic-server.c quic-server-driver.c fuzz_rand.c
   INCLUDE[quic-server]=../include {- $ex_inc -}
   DEPEND[quic-server]=../libcrypto.a ../libssl.a {- $ex_lib -}
 
